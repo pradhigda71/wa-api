@@ -25,7 +25,6 @@
         "otp" => $text
     );*/
 
-    $ch = curl_init();
     $telp = ??? ;
     $instance = ??? ;
     $token = ??? ;
@@ -38,7 +37,7 @@
     $json = json_encode($data); // Encode data to JSON */
     // URL for request POST /message
 
-    $url = 'https://eu10.chat-api.com/$instance/message?token=$token';
+    $url = 'https://eu10.chat-api.com/'.$instance.'/message?token='.$token;
     // Make a POST request
 
     $options = stream_context_create(['http' => [
