@@ -1,10 +1,10 @@
 <?php
-error_reporting(1);
-if (isset($_POST['submit'])) {
-    $nama = $_POST['nama'];
+//error_reporting(1);
+//if (isset($_POST['submit'])) {
+    /*$nama = $_POST['nama'];
     $email = $_POST['email'];
     $telp = $_POST['telp'];
-    $now = date('Y-m-d H:i:s');
+    $now = date('Y-m-d H:i:s');*/
     $length = 5;
 
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -17,16 +17,16 @@ if (isset($_POST['submit'])) {
 
     $otp = $randomString;
 
-    $params = array(
+    /*$params = array(
         "name" => $nama,
         "email" => $email,
         "telp" => $telp,
         "inputdtm" => $now,
         "otp" => $text
-    );
+    );*/
 
     $ch = curl_init();
-    
+    $telp = ??? ;
     $instance = ??? ;
     $token = ??? ;
     $text = 'Your key : '.$otp ;
@@ -51,13 +51,14 @@ if (isset($_POST['submit'])) {
     $send_wa = file_get_contents($url, false, $options);
 
     if ($send_wa) {
-        $insert = $DB->insertData("tabel", $params);
-        if ($insert) {
+        //$insert = $DB->insertData("tabel", $params);
+        /*if ($insert) {
             echo "<script>alert('Success');</script>";
         } else {
             echo "<script>alert('Error');</script>";
-        }
+        }*/
+        echo "<script>alert('Success');</script>";
     } else {
         echo "<script>alert('Error');</script>";
     }
-}
+//}
